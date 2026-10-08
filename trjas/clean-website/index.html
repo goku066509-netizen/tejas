@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blow out the Candles !!!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<div id="viewport">
+  <div id="stage">
+    <div class="bg"></div>
+
+    <!-- S0 INTRO -->
+    <section class="scene" data-scene="intro">
+      <div class="lyr" data-a="streamL"><img src="assets/2b649027482847af58a4e9250c72d79d.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="streamR"><img src="assets/1a46bd1aa6363f3f0fe964992d1a4628.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="envBtn" id="envBtn" role="button" tabindex="0" aria-label="open">
+        <img src="assets/84f183d31e507d60154c8f05c853342b.png" alt="a letter for you" onerror="this.style.display='none'">
+      </div>
+      <div class="lyr" data-a="introKit"><img src="assets/0065f633b36ed9f79b6383af28e2926d.png" alt="" onerror="this.style.display='none'"></div>
+      <p class="lyr script" data-a="introT1">psst… you've got something</p>
+      <p class="lyr script small" data-a="introT2">tap the envelope ♡</p>
+      <div class="lyr" data-a="introSpark"><img src="assets/b58dc6a9766481bf222b681c7176d78d.png" alt="" onerror="this.style.display='none'"></div>
+    </section>
+
+    <!-- S1 BIRTHDAY -->
+    <section class="scene" data-scene="birthday">
+      <div class="lyr" data-a="hbMain"><img src="assets/f65197e42ed4c9bb95ec45da0342b467.png" alt="HAPPY BIRTHDAY" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="hbBoy"><img src="assets/175e9f3bb4e50464461551c7c8bd90a3.png" alt="Birthday Boy" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="hbMy"><img src="assets/9e7f1cf7519b99cb4047562725440301.png" alt="MY BOY" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="hbFw1"><img src="assets/b58dc6a9766481bf222b681c7176d78d.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="hbFw2"><img src="assets/b58dc6a9766481bf222b681c7176d78d.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="hbDogs"><img src="assets/e0ae3e6a46d5f4d81db61797c53d1c94.png" alt="dancing dogs" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="hbRac"><img src="assets/75d168b98e650ba91a7caddb63d4797d.png" alt="" onerror="this.style.display='none'"></div>
+      <button class="lyr pill" data-a="hbNext" data-next>come on in →</button>
+    </section>
+
+    <!-- S2 CAKE (lit) -->
+    <section class="scene" data-scene="cake">
+      <div class="lyr" data-a="ckStreamL"><img src="assets/2b649027482847af58a4e9250c72d79d.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="ckStreamR"><img src="assets/1a46bd1aa6363f3f0fe964992d1a4628.png" alt="" onerror="this.style.display='none'"></div>
+      <h2 class="lyr script big" data-a="ckTitle">Blow out the Candles !!!</h2>
+      <div class="lyr" data-a="ckCake" id="cakeWrap">
+        <img class="pulse" src="assets/b1dee7f2cea3aa95b9dc54d5a8ccc1fa.png" alt="birthday cake" onerror="this.style.display='none'">
+        <div class="flames" id="flames">
+          <span class="flame" style="left:20%"></span>
+          <span class="flame" style="left:34%;animation-delay:.07s"></span>
+          <span class="flame" style="left:48%;animation-delay:.13s"></span>
+          <span class="flame" style="left:62%;animation-delay:.04s"></span>
+          <span class="flame" style="left:75%;animation-delay:.1s"></span>
+        </div>
+      </div>
+      <div class="lyr" data-a="ckDogL"><img src="assets/e0ae3e6a46d5f4d81db61797c53d1c94.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr mirror" data-a="ckDogR"><img src="assets/e0ae3e6a46d5f4d81db61797c53d1c94.png" alt="" onerror="this.style.display='none'"></div>
+      <p class="lyr script small" data-a="ckHint">tap the cake to blow ♡</p>
+    </section>
+
+    <!-- S3 BLOWN -->
+    <section class="scene" data-scene="blown">
+      <div class="lyr" data-a="blStreamL"><img src="assets/2b649027482847af58a4e9250c72d79d.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="blStreamR"><img src="assets/1a46bd1aa6363f3f0fe964992d1a4628.png" alt="" onerror="this.style.display='none'"></div>
+      <h2 class="lyr script big" data-a="blTitle">Yay!! Happy Birthdayyy</h2>
+      <div class="lyr" data-a="blCake"><img src="assets/cd165e98562b4eb24062ebb0fe86e269.png" alt="candles blown out" onerror="this.style.display='none'"></div>
+      <div class="lyr dance" data-a="blDogL"><img src="assets/e0ae3e6a46d5f4d81db61797c53d1c94.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr dance mirror" data-a="blDogR"><img src="assets/e0ae3e6a46d5f4d81db61797c53d1c94.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="blFw"><img src="assets/b58dc6a9766481bf222b681c7176d78d.png" alt="" onerror="this.style.display='none'"></div>
+      <button class="lyr pill" data-a="blNext" data-next>your wish is sealed →</button>
+    </section>
+
+    <!-- S4 GIFT QUESTION -->
+    <section class="scene" data-scene="question">
+      <div class="lyr" data-a="qDisco1"><img src="assets/b387aa4adfcc7da0a7b93c966944bd9b.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="qDisco2"><img src="assets/b387aa4adfcc7da0a7b93c966944bd9b.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="qRibL"><img src="assets/8338b435081652f46c4089cbbcd1a45d.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="qRibR"><img src="assets/8338b435081652f46c4089cbbcd1a45d.png" alt="" onerror="this.style.display='none'"></div>
+      <h2 class="lyr script big" data-a="qTitle">Accept your gifts?</h2>
+      <div class="lyr" data-a="qKit"><img src="assets/0065f633b36ed9f79b6383af28e2926d.png" alt="kitten with presents" onerror="this.style.display='none'"></div>
+      <button class="lyr cloudbtn" data-a="qYes" id="yesBtn">YES</button>
+      <button class="lyr cloudbtn" data-a="qNo" id="noBtn">NO</button>
+      <div class="lyr retry" data-a="qRetry" id="retryMsg">Please try again 🥺</div>
+    </section>
+
+    <!-- S5 GIFT REVEAL -->
+    <section class="scene" data-scene="reveal">
+      <h2 class="lyr script big" data-a="rvTitle">Yay! Look at your gifts!</h2>
+      <div class="lyr" data-a="rvBoxes"><img src="assets/d8408c52ddb203fde5ed3224b5364b42.png" alt="gift boxes" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="rvEnv"><img src="assets/84f183d31e507d60154c8f05c853342b.png" alt="a letter" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="rvBouq"><img src="assets/ced864723a93b0b35f4b2fc51ccf1656.png" alt="flowers" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="rvCake"><img src="assets/b1192a24165944c1d8bece9c8084dea0.png" alt="cake" onerror="this.style.display='none'"></div>
+      <div class="lyr polaroid" data-a="rvPol1">
+        <div class="ph" data-src="photos/photo-flowers.jpg"></div>
+        <span class="tape tl"></span><span class="tape br"></span>
+      </div>
+      <div class="lyr polaroid" data-a="rvPol2">
+        <div class="ph" data-src="photos/photo-night.jpg"></div>
+        <span class="tape tr"></span><span class="tape bl"></span>
+      </div>
+      <div class="lyr" data-a="rvKiss"><img src="assets/c545db2e7965e8b527cf45ac4dea0ff9.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="rvCheers"><img src="assets/57bf3409c60bbfde6733c3d81191bafa.png" alt="" onerror="this.style.display='none'"></div>
+      <button class="lyr pill" data-a="rvNext" data-next>so many memories →</button>
+    </section>
+
+    <!-- S6 MEMORIES -->
+    <section class="scene" data-scene="memories">
+      <h2 class="lyr script big navy" data-a="mmTitle">Some flowers for you!!</h2>
+      <div class="lyr filmstrip" data-a="mmFilm">
+        <div class="ph" data-src="photos/photo-mirror.jpg"></div>
+        <div class="ph" data-src="photos/photo-paris.jpg"></div>
+        <div class="ph" data-src="photos/photo-cafe.jpg"></div>
+        <div class="lyr" data-a="mmBun"><img src="assets/960e0b1386f5f3bf84f39b383cc30a5f.png" alt="bunny" onerror="this.style.display='none'"></div>
+      </div>
+      <div class="lyr" data-a="mmHat"><img src="assets/329c55715946ad187c14bab43d5a3083.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="mmStars"><img src="assets/bdf3a28ec1bd32eac89ac709768a014c.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="mmKit"><img src="assets/d6303b43f481cfa9b016450586ac8a6a.png" alt="kitten with flowers" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="mmHeart"><img src="assets/f7c9037281f6fc9fb4748053a7550017.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="mmSwirl"><img src="assets/a88ee5743b6c47f04d5dc47f34adb9c8.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="mmPearl"><img src="assets/ea032f3391fbe92e111f644aee462aeb.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="mmLily"><img src="assets/f21c9384b336d99c00b4493cb3367f9c.png" alt="" onerror="this.style.display='none'"></div>
+      <button class="lyr pill" data-a="mmNext" data-next>one last thing →</button>
+    </section>
+
+    <!-- S7 FINAL CARD -->
+    <section class="scene" data-scene="final">
+      <div class="lyr" data-a="fnClip"><img src="assets/d08be1d0126a608f3e4e7330fffc4753.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr papercard" data-a="fnCard">
+        <div class="letter-full">
+          <h3>My Dearest [Name],</h3>
+          <p>You make my ordinary days feel extraordinary. Thank you for being my favorite person to talk to, my favorite person to be quiet with, and my favorite person to build a life alongside.</p>
+          <p>I can't wait to see what we create together — more memories, more inside jokes, more quiet Sunday mornings and loud, happy nights.</p>
+          <p>Forever yours, [Your Name]<br>happy birthday, my love ♡</p>
+        </div>
+      </div>
+      <div class="lyr" data-a="fnKiss"><img src="assets/c545db2e7965e8b527cf45ac4dea0ff9.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="fnTamaB"><img src="assets/a6fa60906870335d6f4c231f53818876.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="fnTamaP"><img src="assets/e455405d805ca29786e1b931f29c6509.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="fnBears"><img src="assets/86d668041cd1244b852ceb9c068b7c0e.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="fnRac"><img src="assets/aad3602badbdf475031537cf93a5baa8.png" alt="" onerror="this.style.display='none'"></div>
+      <div class="lyr" data-a="fnDisco"><img src="assets/b387aa4adfcc7da0a7b93c966944bd9b.png" alt="" onerror="this.style.display='none'"></div>
+      <button class="lyr pill" data-a="fnReplay" id="replayBtn">↺ replay our story</button>
+    </section>
+
+  </div>
+
+  <button id="prev" aria-label="previous">‹</button>
+  <button id="next" aria-label="next">›</button>
+  <div id="dots"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
